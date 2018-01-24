@@ -2,11 +2,11 @@
     margin:0;
     padding:0;
 }
-#clickable{
+.clickable{
     color: #6ADDE6;
     text-decoration: underline;
 }
-#blue_link{
+.blue_link{
     color: rgb(96, 96, 236);
 }
 table {
