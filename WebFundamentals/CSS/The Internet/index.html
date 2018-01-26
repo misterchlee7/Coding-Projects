@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img id="logo" src="images/globe.png" alt="globe.png">
+            <h1>The Inter<span style="color: #3E78AA">net</span></h1>
+            <h2>The World Wide Web</h2>
+        </div>
+        <div id="sidebar">
+            <div id="sidebar-nav">
+                <h3>So, what's an <span style="color:red;">Internet?</span></h3>
+                <p>An <span style="color: #3E78AA">inter</span>connected <span style="color: #3E78AA">Net</span>work of computers all around the world!</p>
+                <input type="button" id="btn1" class="button" value="WATCH A VIDEO">
+                <input type="button" id="btn2" class="button" value="MORE RESOURCES">
+            </div>
+            <div id="sidebar-ad">
+                <h3>Reinvent your career in just 14 weeks</h3>
+                <img id="ad" src="images/ad_background.png" alt="ad_background.png" style="max-width: 100%;">
+                <img id="ninja" src="images/ninja.png" alt="ninja.png">
+                <input type="button" id="btn3" class="button" value="Learn More ...">
+            </div>
+        </div>
+        <div id="nav">
+            <a href="#"><img src="images/home.png" alt="home.png">DNS</a>
+            <img src="images/phone.png" alt="phone.png" style="width:35px; position:absolute; top:10px; left:580px;">
+            <p>Mon - Fri 9 a.m. - 5 p.m.(EST)<br><span style="font-size:22px; color:#19C4E0">855.967.3787</span><br>International +1.617.963.0555</p>
+        </div>
+        <div id="content">
+            <h4>Clients and Servers</h4>
+            <p style="margin-left:8px">Computers connected to the <span class="highlight">Web</span> are called <span style="font-weight:bold">clients</span> and <span style="font-weight:bold">servers</span></p>
+            <ul>
+                <li><span class="highlight">Clients</span> are the typical Web user's Internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and <span class="highlight">Web-accessing software</span> available on those devices (usually a web browser like Firefox or Chrome).<br><br></li>
+                <li><span class="highlight">Servers</span> are computers that store <span class="highlight">webpages</span>, <span class="highlight">sites</span>, or <span class="highlight">apps</span>. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser.</li>
+            </ul>
+            <img src="images/client_server.jpg" alt="client_server.jpg" style="max-width:40%">
+            <h4>So What Actually Happens?</h4>
+            <ol>
+                <li>The browser goes to the <span class="highlight">DNS server</span> and finds the real address of the <span class="highlight">server</span> that the website lives on.</li>
+                <li>The browser sends an <span class="highlight">HTTP request</span> message to the server asking it to send a copy of the website to the client.</li>
+                <li>If the server approves the client's request, the server sends the client a <span class="highlight">"200 OK"</span> message, which means "Permission granted! Here you go!", and then starts sending the website's files to the browser as a series of small chunks.</li>
+                <li>The browser assembles the small chunks into a complete website and displays it to you!</li>
+            </ol>
+        </div>
+        <div id="footer">
+            <img src="images/html.png" alt="html.png" width="140">
+            <h4>The Big 3 - HTML, CSS, JavaScript</h4>
+            <p>While the server can process information in many different languages, the files that they serve to the client are always going to be some combination of HTML, CSS, and JavaScript!<br><br>Learn more about the Big 3 <span class="highlight">here</span>!</p>
+        </div>
+    </div>
+</body>
+</html>
