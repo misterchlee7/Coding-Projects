@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    width: 1000px;
+    background-color: #DDDFD4;
+    overflow: hidden;
+}
+#header{
+    margin: 15px;
+    background-color: #38B0AD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header h1, #logo, ul, li{
+    display: inline-block;
+    vertical-align: middle;
+}
+#logo{
+    width: 50px;
+    margin: 13px 5px 13px 13px;
+}
+#header h1{
+    font-size: 32px;
+}
+#header ul{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 160px;
+}
+#header ul li{
+    font-size: 14px;
+    margin: 8px;
+}
+#header a{
+    color: white;
+}
+#content{
+    margin: 15px 15px 5px;
+    background-color: #FBE691;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+#single-col{
+    width: 25%;
+    margin-left: 15px;
+    margin-right: auto;
+    background-color: #153F43;
+    display: inline-block;
+    margin: 15px;
+    vertical-align: top;
+}
+#single-col h3{
+    margin: 15px 0 15px 10px;
+}
+#single-col p{
+    margin: 15px 10px 15px 25px;
+    line-height: 20px;
+}
+#right-col{
+    width: 71%;
+    vertical-align: top;
+    display: inline-block;
+}
+.three-col{
+    width: 28%;
+    margin: 15px;
+    height: 160px;
+    display: inline-block;
+    background-color: #153F43;
+    vertical-align: top;
+}
+.three-col h3{
+    margin: 5px 0 15px 5px; 
+}
+.three-col p{
+    margin: 15px 20px 10px 20px;
+    line-height: 20px;
+}
+.two-col{
+    width: 44.5%;
+    display: inline-block;
+    background-color: #153F43;
+    margin: 15px;
+    vertical-align: top;
+}
+.two-col h3{
+    margin: 5px 0 15px 5px; 
+}
+.two-col p{
+    margin: 15px 20px 10px 20px;
+    line-height: 20px;
+}
+.one-col{
+    background-color: #153F43;
+    width: 94%;
+    margin: 15px;
+}
+.one-col h3{
+    margin: 25px 0 15px 5px; 
+}
+.one-col p{
+    margin: 15px 40px 10px 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+}
+#footer{
+    margin: 15px 0;
+    padding: 22px 15px;
+    background-color: #38B0AD;
+    text-align: center;
+    color: black;
+}
