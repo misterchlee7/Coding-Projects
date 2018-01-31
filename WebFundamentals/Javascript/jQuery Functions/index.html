@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sergeant James Doakes' Magical School of jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#hard-reset").click(function(){
+                location.reload();
+            });
+
+            $("#click").click(function(){
+                $("#header").css("background-image", "url(surprise.jpg)");
+            });
+    
+            $(".hide").click(function(){
+                $("#header").hide();
+            });
+
+            $("#show").click(function(){
+                $("#header").text("SURPRISE MUTHAEFFA!");
+            });
+
+            $("#toggle").click(function(){
+                $("#header").toggle();
+            });
+
+            $("#slideDown").click(function(){
+                $("#header").css("background-color", "white").text("SURPRISE MUTHAEFFA!").hide().slideDown("slow");
+            });
+
+            $("#slideUp").click(function(){
+                $("#header").css("background-color", "green").text("SURPRISE MUTHAEFFA!").slideUp("slow");
+            });
+
+            $("#slideToggle").click(function(){
+                $("#header").slideToggle();
+            });
+
+            $("#fadeIn").click(function () {
+                $("#header").text("SURPRISE MUTHAEFFA!").hide().fadeIn("slow");
+            });
+
+            $("#fadeOut").click(function () {
+                $("#header").text("SURPRISE MUTHAEFFA!").show().fadeOut("slow");
+            });
+
+            $("#addClass").click(function(){
+                $("button").first().addClass("chosen");
+            });
+
+            $("#before").click(function(){
+                $("#before").before("<p>MAGIC MUTHAEFFA</p>")
+            });
+
+            $("#after").click(function(){
+                $("#after").after("<p>MAGIC MUTHAEFFA</p>")
+            });
+
+            $("#append").click(function(){
+                $("#header").append("APPEND MUTHAEFFA<br>");
+            });
+
+            $("#html").click(function(){
+                $("#header").html("<p><bold>ADDED A BOLD SURPRISE MUTHAEFFA!</bold></p>");
+            });
+
+            $("#attr").click(function(){
+                $("p").attr("align", "right");
+            });
+
+            $("#val").click(function(){
+                $("#val-text").val("SURPRISE MUTHAEFFA!");
+            });
+
+            $("#text").click(function(){
+                $("p").text("SURPRISE MUTHAEFFA!");
+            });
+
+            $("#data").click(function(){
+                $("span").data("SURPRISE", " SURPRISE MUTHAEFFA!");
+                $("span").text($("span").data("SURPRISE"));
+            });
+
+        })
+       
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id="header">Sgt James Doakes' Magical School of jQuery</h1>
+        <button id="hard-reset">RESET ME BACK MUTHAEFFA!</button>
+        <div id="body">
+            <div class="rows">
+                <h3 class="titles">.click</h3>
+                <p id="description">.click let's you trigger an event from a click! Click the button to make MAGIC happen!</p>
+                <button id="click">Click Me!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.hide</h3>
+                <p id="description">.hide does EXACTLY what it sounds like!</p>
+                <button class="hide">Hide Me!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.show</h3>
+                <p id="description">.show will show you things. Try clicking on Show me! to reveal a nice surprise.</p>
+                <button id="show" style="display: inline-block">Show Me!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.toggle</h3>
+                <p id="description">.toggle nicely combines .hide and .show so you can switch between hide and show!</p>
+                <button id="toggle">Toggle Me!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.slideDown</h3>
+                <p id="description">.slideDown is like .show except it'll display with a sliding motion you can control.</p>
+                <button id="slideDown">Slide Me Down to Show!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.slideUp</h3>
+                <p id="description">.slideUp is like .hide except it'll hide with a sliding motion you can control.</p>
+                <button id="slideUp">Slide Me Up to Hide!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.slideToggle</h3>
+                <p id="description">.slideUp is like .show except it'll display with a sliding down motion.</p>
+                <button id="slideToggle">Slide Me Up to Hide!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.fadeIn</h3>
+                <p id="description">.fadeIn will fade things back in!</p>
+                <button id="fadeIn">Fade Me!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.fadeOut</h3>
+                <p id="description">.fadeOut will fade things back out!</p>
+                <button id="fadeOut">Fade Out!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.addClass</h3>
+                <p id="description">.addClass will add a class of your choosing to a selected element!</p>
+                <button id="addClass">Add a class with Sass!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.before</h3>
+                <p id="description">.before will add things before the selected element's tag</p>
+                <button id="before">Add magic BEFORE the tag!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.after</h3>
+                <p id="description">.after will add things after the selected element's tag</p>
+                <button id="after">Add magic AFTER the tag!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.append</h3>
+                <p id="description">.append will let you add things BEFORE the tag ends</p>
+                <button id="append">Add things BEFORE the tag ends!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.html</h3>
+                <p id="description">.html either GETS you the HTML content of the selected element or SETS the HTML content of said element</p>
+                <button id="html">Change the HTML!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.attr</h3>
+                <p id="description">.attr can GET or SET the value of an attribute for set of matched elements</p>
+                <button id="attr">Change the attribute the paragraph alignments!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.val</h3>
+                <p id="description">.val can GET or SET the values of an element</p>
+                <input type="text" value="Push the button!" id="val-text">
+                <button id="val">Change the value of the input!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.text</h3>
+                <p id="description">.text can change the text inside an element but NOT HTML elements like .html can</p>
+                <button id="text">Change the text of the paragraph!</button>
+            </div>
+            <div class="rows">
+                <h3 class="titles">.data</h3>
+                <p id="description">.data can change the text inside an element but NOT HTML elements like <span></span> .html can</p>
+                <button id="data">See what the stored values in .data are!</button>
+            </div>
+        
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
