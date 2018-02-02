@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    width: 980px;
+    overflow: hidden;
+}
+#banners img{
+    width: 210px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+#details{
+    width: 70%;
+    margin: 15px auto;
+    border: 1px dashed black;
+}
+h3{
+    margin: 15px 0 10px 15px;
+}
+p{
+    margin: 5px 0 10px 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+span{
+    font-weight: 200;
+    font-style: normal;
+}

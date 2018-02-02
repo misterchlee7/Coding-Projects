@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    width: 980px;
+    overflow: hidden;
+}
+#body{
+    width: 80%;
+    margin: 15px auto;
+    float: left;
+}
+#pokedex{
+    width: 20%;
+    margin: 15px auto;
+    display: inline-block;
+    position: fixed;
+    text-align: center;
+    border: 5px solid red;
+}
+ul li{
+    list-style: none;
+}
+h2 {
+    margin-top: 15px;
+}
+h5{
+    font-size: 18px;
+    margin-top: 15px;
+}
