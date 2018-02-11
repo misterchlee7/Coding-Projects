@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    text-align: right;
+}
+h1{
+    margin: 70px 210px 50px 0;
+}
+span{
+    display: block;
+    margin-right: 210px;
+    margin-bottom: 15px;
+}
+p{
+    margin-right: 210px;
+}

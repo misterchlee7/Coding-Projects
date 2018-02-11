@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Picker Xtreme</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css") }}">
+</head>
+<body style="background-color: rgb({{r}}, {{g}}, {{b}})">
+    <div id="wrapper">
+        <h1>Enter your color values below:</h1>
+        <form action="/process" method="post">
+            <span>Red: <input type="text" name="red"></span>
+            <span>Green: <input type="text" name="green"></span>
+            <span> Blue: <input type="text" name="blue"></span>
+            <span><input type="submit" value="Show my color!"></span>
+        </form>
+        <p>* All values must be between 1 and 255</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    width: 900px;
+}
+#your_gold{
+    font-size: 30px;
+    margin: 15px 0 15px 30px;
+}
+#farm, #cave, #house, #casino{
+    border: 2px solid black;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+h3{
+    margin: 15px;
+}
+h5{
+    margin: 0 15px 22px;
+}
+input{
+    margin-bottom: 15px;
+}
+#activities{
+    width: 60%;
+    margin: 15px;
+    overflow: scroll;
+    border: 2px solid black;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
