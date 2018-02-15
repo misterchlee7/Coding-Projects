@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    display: inline-block;
+    border: 1px solid black;
+    width: 280px;
+    margin: 20px;
+    padding: 40px;
+}
+.span{
+    margin: 5px;
+}
+p{
+    margin: 5px;
+    float: left;
+}
+textarea{
+    display: inline-block;
+}
+#goback{
+    position: relative;
+    top:115px;
+}
