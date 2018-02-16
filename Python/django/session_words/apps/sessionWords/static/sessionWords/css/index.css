@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#input-form, #sessions{
+    display: inline-block;
+}
+#sessions{
+    position: fixed;
+    float: right;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.black{
+    color: black;
+}
+.big{
+    font-size: 22px;
+}
+.normal{
+    font-size: 16px;
+}
+#input-form{
+    padding: 20px;
+}
+#sessions{
+    padding: 35px 20px;
+    border-left: 1px solid black;
+}
+p{
+    margin: 7px;
+}
+input{
+    margin: 3px 5px;
+}
