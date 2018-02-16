@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('apps.blogs_app.urls')),
+    url(r'^', include('apps.surveys_app.urls')),
+    url(r'^', include('apps.users_app.urls')),
 ]
