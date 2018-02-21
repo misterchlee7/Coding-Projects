@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Show</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'semirestfulusers/css/index.css' %}">
+</head>
+<body>
+    <h1>User {{ id }}</h1>
+    <h4>Full Name: {{ user.first_name }} {{ user.last_name }}</h4>
+    <h4>Email: {{ user.email }}</h4>
+    <h4>Created at: {{ user.created_at }}</h4>
+    <form action="/users/{{ id }}/edit">
+        {% csrf_token %}
+        <input type="submit" value="Edit">
+    </form>
+    <form action="/users/{{ id }}/destroy">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
