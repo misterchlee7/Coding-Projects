@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Reviews</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reviewer/css/style.css' %}">
+</head>
+<body>
+    <div id="header">
+            <a href="/">Home</a>
+            <a href="/">Add Book and Review</a>
+            <a href="/">Logout</a>
+    </div>
+    <h1>User Alias: {{ user.alias }}</h1>
+    <h3>Name: {{ user.name }}</h3>
+    <h3>Email: {{ user.email }}</h3>
+    <h3>Total Reviews: {{ rev_count }}</h3>
+    <h2>Posted Reviews on the following books:</h2>
+    <ul>
+        {% for reviewed in also_reviewed %}
+        <li><a href="/books/{{ reviewed.book.id }}">{{ reviewed.book.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

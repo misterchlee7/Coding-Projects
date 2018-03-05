@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books Home</title>
+</head>
+<body>
+    <h1>Welcome, {{ alias }}</h1>
+    <a href="/books/add">Add Book and Review</a>
+    <a href="/logout">Logout</a>
+    <h2>Recent Book Reviews</h2>
+    <div>
+        {% for review in reviews %}
+            <p><a href="/books/{{ review.book.id }}">{{ review.book.title }}</a></p>
+            <p>Rating: {{ review.stars }}</p>
+            <p>{{ review.user.alias }} says: {{ review.review }}</p>
+            <p>Posted on {{ review.created_at }}</p>
+        {% endfor %}
+    </div>
+    <div>
+        <h2>Other Books with Reviews</h2>
+        <div>
+            <p><a href="/">Harry Potter</a></p>
+        </div>
+    </div>
+</body>
+</html>

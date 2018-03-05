@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reviewer/css/style.css' %}">
+</head>
+<body>
+    <div id="header">
+        <h1>{{ book.title }}</h1>
+        <h4>Author: {{ book.author }}</h4>
+        <span>
+            <a href="/">Home</a>
+            <a href="/">Logout</a>
+        </span>
+    </div>
+    <div id="reviews">
+        <h2>Reviews:</h2>
+        <div id="book_review">
+            <p>Rating: {{ stars }}</p>
+            {% for review in reviews %}
+                <p><a href="/users/{{ review.reviewer.id }}">{{ review.reviewer.name }}</a> says: {{ review.review }}</p>
+                <p>{{ review.created_at }}</p>
+                <br>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="add_review">
+        <h2>Add a Review:</h2>
+        <form action="/add_review" method="post">
+            {% csrf_token %}
+            <textarea name="review" cols="30" rows="10"></textarea>
+            <p>Rating: <select name="star_rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></p>
+            <input type="submit" value="Submit Review">
+        </form>
+    </div>
+</body>
+</html>
