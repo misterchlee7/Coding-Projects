@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+        class Deck {
+            constructor(deck, og_deck=deck) {
+                const card_num_arr = [2,3,4,5,6,7,8,9,10,"J","Q","K","A"];
+                const card_suit_arr = [" of hearts"," of spades"," of diamonds"," of clubs"];
+                const deck_arr = [];
+                for (let i = 0; i < card_num_arr.length; i++){
+                    for (let j = 0; j < card_suit_arr.length; j++){
+                        deck_arr.push(card_num_arr[i] + card_suit_arr[j]);
+                    }
+                }
+                this.deck = deck_arr;
+            }
+
+            shuffle() {
+                var currentIndex = this.deck.length, tempValue, randomIndex;
+
+                while (0 !== currentIndex) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+                    tempValue = this.deck[currentIndex];
+                    this.deck[currentIndex] = this.deck[randomIndex];
+                    this.deck[randomIndex] = tempValue;
+                }
+                return this;
+            }
+
+            deal() {
+                var random_card_idx = Math.floor(Math.random() * 53);
+                var random_card = this.deck.splice(random_card_idx, 1);
+                return random_card;
+                console.log(this.deck);
+            }
+
+            reset() {
+                location.reload();
+            }
+        }
+            const the_deck = new Deck();
+        
+        class Player extends Deck {
+            constructor (name, hand=[], deck){
+                super(deck);
+                this.name = name;
+                this.hand = hand;
+            }
+
+            hit_me() {
+                var dealt_card = super.deal();
+                this.hand.push(dealt_card[0]);
+                console.log(dealt_card[0]);
+                console.log(this.deck);
+                console.log(this.hand);
+            }
+
+            discard(remove_idx) {
+                this.remove_idx = remove_idx;
+                this.hand.splice(remove_idx,1);
+                this.deck.push(this.hand[remove_idx]);
+                console.log(this.deck)
+                console.log(this.hand)
+            }
+        }
+            let jim = new Player("jim");  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

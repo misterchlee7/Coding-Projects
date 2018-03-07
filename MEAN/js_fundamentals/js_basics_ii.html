@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    let mm = function magic_multiply(x,y){
+        if(x == 0 && y == 0){
+            console.log("All inputs 0");
+        }
+        if(typeof y == "string"){
+            console.log("Error: Can not multiply by string")
+        }
+        if(typeof x == "string"){
+            str = "";
+            for (let i = 0; i < y; i++){
+                str += x;
+            }
+            console.log(str);
+        }
+        if(Array.isArray(x)){
+            for (let i = 0; i < x.length; i++){
+                x[i] = x[i] * y;
+            }
+            return x;
+        }
+        else{
+            x = x * y;
+            return x;
+        }
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
