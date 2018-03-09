@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Group Chat</title>
+    <style>
+        div{
+            border: 1px solid red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+    
+        $(document).ready(function(){
+
+            var socket = io.connect();
+            socket.on("new_user_name_req", function(data){
+                var abbrv_socket_id = data;
+                var user_name = prompt("Welcome to Group Chat! Please enter your username so we can begin!");
+
+                socket.emit("new_user_logged", user = { name: user_name, user_id: abbrv_socket_id });
+                socket.on("new_user_announce", function(data){
+                    $("#annoucements").html(`<p>${data.user_entered.name} - ${data.user_entered.user_id} has entered the chatroom</p>`);
+                    });
+                });
+                socket.on("new_user_update_screen", function(data){
+                    for (var i = 0; i < data.chat_log.length; i++){
+                        $("#chatlog").append(`<p>${ data.chat_log[i] }</p>`);        
+                    }
+                    $("#send").click(function(){
+                        socket.emit("message_sent", context = { chat_user: data.user_entered, chat: $("#textbox").val() });
+                    });
+                });
+                
+                socket.on("message_sent_broadcast", function(data){
+                    $("#chatlog").append(`<p>${data}</p>`);
+                });
+            })
+            
+    </script>
+</head>
+<body>
+    <h1>Conversation Board</h1>
+    <div id="annoucements"></div>
+    <div id="chatlog"></div>
+    <input type="text" placeholder="Enter your message here..." id="textbox">
+    <p><button id="send">Send</button></p>
+</body>
+</html>
