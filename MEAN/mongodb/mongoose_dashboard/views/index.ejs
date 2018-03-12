@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+</head>
+<body>
+    <h1>All of the Mongoose Family Members</h1>
+    <button><a href="/ani/new">Add New</a></button>
+    <ul>
+        <% for(var x in mongooses){ %>
+            <li><a href="/ani/get/<%= mongooses[x]._id %>"><%= mongooses[x].name %></a></li>
+                <ul>
+                    <li><%= mongooses[x].sex %></li>
+                    <li><%= mongooses[x].astro_sign %></li>
+                </ul>
+        <% } %>
+    </ul>
+</body>
+</html>

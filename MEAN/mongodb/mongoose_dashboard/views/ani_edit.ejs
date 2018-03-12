@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Mongoose</title>
+</head>
+<body>
+    <button><a href="/">Go Home</a></button>
+    <form action="/ani/edit/<%= mongoose._id %>" method="POST">
+        <h1>Name: <input type="text" name="name" value="<%= mongoose.name %>"></h1>
+        <h3>Sex: <select name="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select></h3>
+        <h3>Astrological Sign: <input type="text" name="astro_sign" value="<%= mongoose.astro_sign %>"></h3>
+        <input type="submit" value="Submit Changes">
+    </form>
+</body>
+</html>
