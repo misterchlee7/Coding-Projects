@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Message Board</title>
+</head>
+<body>
+    <h1>The Dojo Message Board</h1>
+    <form action="/post_msg" method="POST">
+        <p>Name:</p>
+        <p><input type="text" name="post_name"></p>
+        <p>Message:</p>
+        <textarea name="post_text" cols="30" rows="10"></textarea>
+        <p><input type="submit" value="Post Message"></p>
+    </form>
+
+    <% if(posts){ %>
+        <% for(var x in posts){ %>
+        <div class="post_block">
+            <form action="/post_comment/<%= posts[x]._id %>" method="POST">
+                <div class="msg_seg">
+                    <h3>Name: <%= posts[x].name %></h3>
+                    <h3>Message: <%= posts[x].post %></h3>
+                </div>
+                <div class="comment_seg">
+                    <% for(var y=0; y<posts[x].comments.length; y++){ %>
+                    <div class="comment">
+                        <h5>Name: <%= posts[x].comments[y].name %></h5>
+                        <h5>Comment: <%= posts[x].comments[y].comment %></h5>
+                    </div>
+                    <% } %>
+                    <div class="input_comment_seg">
+                        <p>Name:</p>
+                        <p><input type="text" name="name"></p>
+                        <p>Comment:</p>
+                        <p><textarea name="comment" cols="30" rows="10"></textarea></p>
+                        <p><input type="submit" value="Post comment"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <% } %>
+    <% } %>
+</body>
+</html>
