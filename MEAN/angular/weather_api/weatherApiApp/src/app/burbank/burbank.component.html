@@ -1,0 +1,9 @@
+<h1>Burbank, CA</h1>
+<img src="https://images.pexels.com/photos/164183/pexels-photo-164183.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="burbank.jpg">
+<p>Humidity: {{ city_data.main.humidity }}</p>
+<p>Temperature (Average): {{ city_data.main.temp }}</p>
+<p>Temperature (High): {{ city_data.main.temp_max }}</p>
+<p>Temperature (Low): {{ city_data.main.temp_min }}</p>
+<p>Status: {{ city_data.weather[0].main }}</p>
+
+{{ city_data | json }}

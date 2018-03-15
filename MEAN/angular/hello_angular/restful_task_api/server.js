@@ -28,7 +28,7 @@ app.get("/tasks", (req, res) => {
             res.json({ message: "Error", error: err });
         }
         else{
-            res.json({ message: "Success", data: tasks });
+            res.json({ message: "Success", tasks: tasks });
         }
     })
 })

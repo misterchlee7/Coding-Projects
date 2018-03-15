@@ -1,0 +1,19 @@
+<style>
+  li{
+    list-style-type: none;
+    display: inline;
+    margin: 5px;
+  }
+</style>
+
+<h1>Dojo Weather Forecast</h1>
+<ul>
+  <li><a [routerLink]="['seattle']" (click)="onCityClick('seattle,US')">Seattle WA |</a></li>
+  <li><a [routerLink]="['sanjose']" (click)="onCityClick('fremont,US')">San Jose CA |</a></li>
+  <li><a [routerLink]="['burbank']" (click)="onCityClick('burbank,US')">Burbank CA |</a></li>
+  <li><a [routerLink]="['dallas']" (click)="onCityClick('dallas,US')">Dallas TX |</a></li>
+  <li><a [routerLink]="['dc']" (click)="onCityClick('maryland,US')">Washington DC |</a></li>
+  <li><a [routerLink]="['chicago']" (click)="onCityClick('chicago,US')">Chicago IL </a></li>
+</ul>
+{{ city_data | json }}
+<router-outlet></router-outlet>

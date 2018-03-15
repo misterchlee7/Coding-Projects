@@ -1,0 +1,31 @@
+<div id="wrapper">
+    <div id="your_gold">Your gold: {{ totalGold }}</div>
+    <div id="locations">
+        <div id="farm">
+            <h3>Farm</h3>
+            <h5>(earns 2-5 golds)</h5>
+            <button name="farm" (click)="onButtonClickFarm()">Farm!</button>
+        </div>
+        <div id="cave">
+            <h3>Cave</h3>
+            <h5>(earns 5-10 golds)</h5>
+            <button name="cave" (click)="onButtonClickCave()">Cave!</button>
+        </div>
+        <div id="house">
+            <h3>House</h3>
+            <h5>(earns 7-15 golds)</h5>
+            <button name="house" (click)="onButtonClickHouse()">House</button>
+        </div>
+        <div id="casino">
+            <h3>Casino</h3>
+            <h5>(earns/takes 0-100 golds)</h5>
+            <button name="casino" (click)="onButtonClickCasino()">Casino!</button>
+        </div>
+    </div>
+    <div id="activities">
+      <p *ngFor="let x of log">{{ x.logString }}</p>
+    </div>
+    <div id="leaderboard">
+    </div>
+</div>
+
