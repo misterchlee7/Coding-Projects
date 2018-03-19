@@ -1,0 +1,8 @@
+<h1>Ledger Transaction Details</h1>
+<h2>Detailed view of the transaction from the ledger</h2>
+<div *ngFor="let x of tableData">
+  <div *ngIf="x.id == detail_id">
+    <p>Transaction ID: {{ x.id }}</p>
+    <p>Action: {{ x.amount }} coins {{ x.action }}</p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h1>Browse the Ledger</h1>
+<h4>Here you can view all past transactions history</h4>
+<div id="ledger-log">
+  <table>
+    <caption>ShintoCoin Ledger</caption>
+    <thead>
+      <tr>
+        <th>Action:</th>
+        <th>Amount:</th>
+        <th>Value:</th>
+        <th>&nbsp;&nbsp;&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of tableData">
+        <td>{{ x.action }}</td>
+        <td>{{ x.amount }}</td>
+        <td>{{ x.amount * 1 }}</td>
+        <td><a [routerLink]="['/detail/', x.id]">Detail</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

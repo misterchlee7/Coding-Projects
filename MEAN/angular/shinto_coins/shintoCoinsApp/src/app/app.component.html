@@ -1,0 +1,27 @@
+<style>
+  img{
+    display: inline-block;
+  }
+  ul{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -120px;
+  }
+  li{
+    list-style-type: none;
+    display: inline;
+  }
+</style>
+
+<div id="header">
+  <img src="http://icons.iconarchive.com/icons/webalys/kameleon.pics/128/Yin-Yang-icon.png" alt="shintocoin_logo.jpg" id="logo">
+  <ul id="nav-bar">
+    <li><button [routerLink]="['home']">Home</button></li>
+    <li><button [routerLink]="['mine']">Mine Coins</button></li>
+    <li><button [routerLink]="['buy']">Buy Coins</button></li>
+    <li><button [routerLink]="['sell']">Sell Coins</button></li>
+    <li><button [routerLink]="['ledger']">Browse Ledger</button></li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
