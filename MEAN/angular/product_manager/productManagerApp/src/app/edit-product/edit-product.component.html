@@ -1,0 +1,15 @@
+<h1>Edit Product</h1>
+
+<div id="errors">
+  {{ errors }}
+</div>
+
+<form (submit)= "onSubmitEdit()">
+  <h3>Title <input type="text" name="editProduct.title" [(ngModel)]="editProduct.title" placeholder="Item title here"></h3>
+  <h3>Price <input type="text" name="editProduct.price" [(ngModel)]="editProduct.price" placeholder="Price here"></h3>
+  <h3>Image url <input type="text" name="editProduct.image_url" [(ngModel)]="editProduct.image_url" placeholder="Product image url here"></h3>
+  <p><span>
+    <button type="submit">Update</button>
+    <button (click)="onButtonClickDel(productId)">Delete</button>
+  </span></p>
+</form>

@@ -1,0 +1,15 @@
+<h1>Create a New Product</h1>
+
+<div id="errors">
+  {{ errors }}
+</div>
+
+<form (submit)= "onSubmitCreate()">
+  <h3>Title <input type="text" name="newProduct.title" [(ngModel)]="newProduct.title" placeholder="Item title here"></h3>
+  <h3>Price <input type="text" name="newProduct.price" [(ngModel)]="newProduct.price" placeholder="Price here"></h3>
+  <h3>Image url <input type="text" name="newProduct.image_url" [(ngModel)]="newProduct.image_url" placeholder="Product image url here"></h3>
+  <p><span>
+    <button type="submit">Create</button>
+    <button [routerLink]= "['/product_list']">Cancel</button>
+  </span></p>
+</form>
