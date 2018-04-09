@@ -1,10 +1,12 @@
 class BankAccount
+    attr_accessor :checking_total, :total_amount
+
     @@no_of_accts = 0
-    def initialize
-        @acct
-        @checking_total = 0
-        @savings_total = 0
-        @total_amount = @checking_total + @savings_total
+    def initialize(checking_total = 0, savings_total = 0, total_amount = checking_total + savings_total)
+        @acct = 111111
+        @checking_total = checking_total
+        @savings_total = savings_total
+        @total_amount = total_amount
         @@no_of_accts += 1
         @@interest_rate = 0.01
     end
@@ -28,10 +30,10 @@ class BankAccount
     def withdraw_chk(val)
         if val <= @checking_total
             @checking_total -= val
-            puts @checking_total
+            @checking_total
             self
         else
-            puts "Error! You do not have enough funds in your checking"
+            "Error! You do not have enough funds in your checking"
         self
         end
     end
@@ -50,16 +52,16 @@ class BankAccount
     def withdraw_savings(val)
         if val <= @savings_total
             @savings_total -= val
-            puts @savings_total
+            @savings_total
             self
         else
-            puts "Error! You do not have enough funds in your savings"
+            "Error! You do not have enough funds in your savings"
         self
         end
     end
 
     def account_information
-        puts "Account # #{@acct}, Total money #{@total_amount}, Checking balance #{@checking_total}, Savings balance #{@savings_total}, Interest rate #{@@interest_rate}"
+        "Account # #{@acct}, Total money #{@total_amount}, Checking balance #{@checking_total}, Savings balance #{@savings_total}, Interest rate #{@@interest_rate}"
     end
 
     private
@@ -68,5 +70,5 @@ class BankAccount
         end
 end
 
-bank1 = BankAccount.new
-bank1.acct_num.deposit_savings(105).deposit_chk(66).account_information
+# bank1 = BankAccount.new
+# bank1.acct_num.deposit_savings(105).deposit_chk(66).account_information

@@ -1,0 +1,44 @@
+<style>
+    #student-table, #student-table-head th, #student-table-body td{
+        border: 1px solid black;
+        padding: 5px;
+    }
+</style>
+
+<h1><%= @dojo_find.branch %> <a href="/dojos/<%= @dojo_find.id %>/edit">Edit</a></h1>
+<br>
+<h3>Address: <%= @dojo_find.street %></h3>
+<h3>City: <%= @dojo_find.city %>  State: <%= @dojo_find.state %></h3>
+<br>
+
+<% if flash[:success] %>
+    <%= flash[:success] %>
+<% end %>
+
+<h2>Student Roster</h2>
+<table id="student-table">
+    <thead id="student-table-head">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="student-table-body">
+        <% @students.each do |student| %>
+        <tr>
+            <td><%= student.first_name %></td>
+            <td><%= student.last_name %></td>
+            <td><%= student.email %></td>
+            <td>
+                <a href="/dojos/<%= @dojo_find.id %>/students/<%= student.id %>">Show</a> | 
+                <a>Edit</a> | 
+                <a>Destroy</a>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<a href="/dojos">Home</a> | <a href="/dojos/<%= @dojo_find.id %>/create/student">Add Student</a>

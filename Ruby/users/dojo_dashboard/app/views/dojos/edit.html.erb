@@ -1,0 +1,19 @@
+<h1>Editing <%= @dojo_edit.branch %></h1>
+
+<% if flash[:notice] %>
+    <% flash[:notice].each do |key, value| %>
+        <p><%= key %> <%= value %></p>
+    <% end %>
+<% end %>
+
+<form action="/dojos/<%= @dojo_edit.id %>" method="post">
+    <p><input type="hidden" name="_method" value="patch"></input></p>
+    <p><input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"></input></p>
+    <p><input type="text" name='dojos[branch]' placeholder="<%= @dojo_edit.branch %>"></input>  Dojo Branch Name</p>
+    <p><input type="text" name='dojos[street]' placeholder="<%= @dojo_edit.street %>"></input>  Street Address</p>
+    <p><input type="text" name='dojos[city]' placeholder="<%= @dojo_edit.city %>"></input>  City</p>
+    <p><input type="text" name='dojos[state]' placeholder="<%= @dojo_edit.state %>"></input>  State</p>
+    <p><input type="submit" value="Edit"></input></p>
+</form>
+
+<a href="/dojos">Go Back</a> | <a href="/dojos/<%= @dojo_edit.id %>">Show</a>
